@@ -1,11 +1,11 @@
 import re
 
-#define the variables
+#Define the variables
 ipAddr = []
 subMask = []
 broadAddr = []
 
-#begin code
+#Begin code
 
 print("#############################################\n"
       + "@When entering IP Addresses and Subnet Masks,\n"
@@ -13,7 +13,7 @@ print("#############################################\n"
       + "@ '192.168.1.0'\n"
       + "############################################\n\n")
 
-#function to ask user to enter IP Address and separate its octets
+#Function to ask user to enter IP Address and separate its octets
 
 def GetIPSeparate():
 
@@ -23,7 +23,7 @@ def GetIPSeparate():
     print("\n")
     return start
 
-#function to ask user to enter Subnet Mask and separate its octets
+#Function to ask user to enter Subnet Mask and separate its octets
 
 def GetSubSeparate():
 
@@ -34,7 +34,7 @@ def GetSubSeparate():
 
     return start
 
-#acquire values for the IP address and Subnet Mask
+#Acquire values for the IP address and Subnet Mask
     
 ipAddr = GetIPSeparate()
 subMask = GetSubSeparate()
@@ -58,7 +58,7 @@ for sub in subMask:
         i = i + 1
     #If the selected octet in the SubMask is not 255 OR 0...
     else:
-        #find the Magic Number...
+        #Find the Magic Number...
         magicN = 256 - int(ipAddr[i])
         #Continually add the magicN up until it is one addition greater than the ipAddr value...
         while numList[-1] < int(ipAddr[i]):
@@ -75,139 +75,4 @@ print(subMask[0] + "." + subMask[1] + "." + subMask[2] + "." + subMask[3] + "\n"
 print("The Broadcast Address for this network is: ")
 print(broadAddr[0] + "." + broadAddr[1] + "." + broadAddr[2] + "." + broadAddr[3] + "\n")
 
-#Now sit back and enjoy some coffee.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Shit...I probably should include some sort of error for if the user puts in anything but numbers.
-#Or if they mis-type the IP address.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#...Nah. *sips coffee and calls it a day*
+#Good enough for now.
