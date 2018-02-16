@@ -3,7 +3,7 @@ import re
 #Define the variables
 ipAddr = []
 subMask = []
-broadAddr = []
+subAddr = []
 
 #Begin code
 
@@ -49,12 +49,12 @@ for sub in subMask:
     #If the selected octet in the SubMask is 255...
     if sub == '255':
         #Make the corresponding octet in the NetAddr equal to the corresponding octet in the ipAddress
-        broadAddr.append(ipAddr[i])
+        subAddr.append(ipAddr[i])
         i = i + 1
     #If the selected octet in the SubMask is 0...
     elif sub == '0':
         #Make the corresponding octet in the NetAddr equal to 0
-        broadAddr.append('0')
+        subAddr.append('0')
         i = i + 1
     #If the selected octet in the SubMask is not 255 OR 0...
     else:
@@ -64,15 +64,15 @@ for sub in subMask:
         while numList[-1] < int(ipAddr[i]):
             numList.append(numList[-1] + magicN)
         #Select the number that is equal to, or as close to the value of the ipAddress...
-        broadAddr.append(str(numList[len(numList) - 1]))
+        subAddr.append(str(numList[len(numList) - 1]))
 
 #Print Everything. EVERYTHING. PRINT ALL THE PRINTS.
 
-print("The Network Address for this network is: ")
+print("The Network Address is: ")
 print(ipAddr[0] + "." + ipAddr[1] + "." + ipAddr[2] + "." + ipAddr[3] + "\n")
 print("The Subnet Mask for this network is: ")
 print(subMask[0] + "." + subMask[1] + "." + subMask[2] + "." + subMask[3] + "\n")
-print("The Broadcast Address for this network is: ")
-print(broadAddr[0] + "." + broadAddr[1] + "." + broadAddr[2] + "." + broadAddr[3] + "\n")
+print("The Subnet Address is: ")
+print(subAddr[0] + "." + subAddr[1] + "." + subAddr[2] + "." + subAddr[3] + "\n")
 
 #Good enough for now.
