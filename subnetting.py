@@ -1,3 +1,11 @@
+'''
+I initially created this program to calculate IP addresses and Subnets, and although not perfect and could use quite
+a bit of rewriting, it was the first program I created on my own. I made it while I was still learning Python in my 
+COP 1000 class.
+
+Created By: Austin Garrett (MetaRollover)
+'''
+
 import re
 
 #Define the variables
